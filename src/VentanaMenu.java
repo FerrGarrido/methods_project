@@ -15,8 +15,8 @@ public class VentanaMenu extends JFrame implements ActionListener {
         setLayout(new GridLayout(2, 1)); //usar un layout de rejilla de 2 filas y 1 columna
 
         //crear los botones del menú
-        botonSumar = new JButton("Sumar");
-        botonMultiplicar = new JButton("Multiplicar");
+        botonSumar = new JButton("Falsa Posicion");
+        botonMultiplicar = new JButton("Newton");
 
         //agregar los botones a la ventana
         add(botonSumar);
