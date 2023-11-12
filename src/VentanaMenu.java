@@ -4,27 +4,35 @@ import java.awt.event.*;
 
 public class VentanaMenu extends JFrame implements ActionListener {
 
-    private JButton botonSumar, botonMultiplicar; //botones del menú
+    private JButton botonFalsaPosicion, botonNewton, botonSecante, botonGauss, botonJacobi, botonGaussS, botonCrout; //botones del menú
     private VentanaOperacion ventanaOperacion; //ventana para realizar la operación
 
     public VentanaMenu() {
-        super("Ventana con menú"); //título de la ventana
-        setSize(300, 200); //tamaño de la ventana
+        super("Metodos Numericos"); //título de la ventana
+        setSize(800, 600); //tamaño de la ventana
         setLocationRelativeTo(null); //centrar la ventana
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); //cerrar el programa al cerrar la ventana
         setLayout(new GridLayout(2, 1)); //usar un layout de rejilla de 2 filas y 1 columna
 
         //crear los botones del menú
-        botonSumar = new JButton("Falsa Posicion");
-        botonMultiplicar = new JButton("Newton");
-
+        botonFalsaPosicion = new JButton("Falsa Posicion");
+        botonNewton = new JButton("Newton");
+        botonSecante = new JButton("Secante");
+        botonGauss = new JButton("Gauss");
+        botonJacobi = new JButton("Jacobi");
+        botonGaussS = new JButton("Gauss-Seidel");
+        botonCrout = new JButton("Crout");
         //agregar los botones a la ventana
-        add(botonSumar);
-        add(botonMultiplicar);
-
+        add(botonFalsaPosicion);
+        add(botonNewton);
+        add(botonSecante);
+        add(botonGauss);
+        add(botonJacobi);
+        add(botonGaussS);
+        add(botonCrout);
         //agregar un escuchador de acción a cada botón
-        botonSumar.addActionListener(this);
-        botonMultiplicar.addActionListener(this);
+        botonFalsaPosicion.addActionListener(this);
+        botonNewton.addActionListener(this);
     }
 
     //método que se ejecuta al pulsar un botón
@@ -103,12 +111,12 @@ class VentanaOperacion extends JFrame implements ActionListener {
                 int num2 = Integer.parseInt(campo2.getText());
                 int resultado = 0; //variable para almacenar el resultado
                 //si la operación es sumar
-                if (operacion.equals("Sumar")) {
+                if (operacion.equals("Falsa Posicion")) {
                     //calcular la suma de los números
                     resultado = num1 + num2;
                 }
                 //si la operación es multiplicar
-                else if (operacion.equals("Multiplicar")) {
+                else if (operacion.equals("Newton")) {
                     //calcular el producto de los números
                     resultado = num1 * num2;
                 }
