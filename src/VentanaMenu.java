@@ -33,6 +33,11 @@ public class VentanaMenu extends JFrame implements ActionListener {
         //agregar un escuchador de acción a cada botón
         botonFalsaPosicion.addActionListener(this);
         botonNewton.addActionListener(this);
+        botonSecante.addActionListener(this);
+        botonGauss.addActionListener(this);
+        botonJacobi.addActionListener(this);
+        botonGaussS.addActionListener(this);
+        botonCrout.addActionListener(this);
     }
 
     //método que se ejecuta al pulsar un botón
@@ -57,7 +62,7 @@ public class VentanaMenu extends JFrame implements ActionListener {
         vm.setVisible(true);
     }
 }
-
+// Esta parte del codigo despliega la  ventana con los campos que contiene cada boton 
 class VentanaOperacion extends JFrame implements ActionListener {
 
     private JTextField campo1, campo2, campo3; //campos de texto para los operandos y el resultado
