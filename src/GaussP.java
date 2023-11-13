@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Gauss {
+public class GaussP {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Introduce el número de ecuaciones:");
